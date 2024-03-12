@@ -1,1 +1,0 @@
-export const secret = '2004001234';
