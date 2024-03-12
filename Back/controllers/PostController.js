@@ -6,7 +6,6 @@ import Comment from "../models/Comment.js";
 export const getAll = async (req, res) => {
     try {
         const posts = await Post.find().populate('user').exec();
-        // getting the user that is posting
 
         const postsWithCommentCounts = await Promise.all(
             posts.map(async (post) => {
